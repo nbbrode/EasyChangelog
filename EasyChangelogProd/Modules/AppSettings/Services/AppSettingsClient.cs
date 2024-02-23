@@ -1,11 +1,12 @@
 ﻿using EasyChangelogProd.Modules.AppSettings.Interfaces;
 using EasyChangelogProd.Modules.AppSettings.Models;
+using EasyChangelogProd.Modules.GitCommand.Interfaces;
 using Microsoft.Extensions.Configuration;
 
 namespace EasyChangelogProd.Modules.AppSettings.Services;
 
 public class AppSettingsClient(IConfiguration configuration)
-    : IChangelogSettings, ICommitTagTypes
+    : IGitCommandAppSettings
 {
     ChangelogSettings__prune IChangelogSettings.GetChangelogSettingsPrune()
     {
