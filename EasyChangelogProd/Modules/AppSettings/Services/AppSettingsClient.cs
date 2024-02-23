@@ -2,12 +2,13 @@
 using EasyChangelogProd.Modules.AppSettings.Models;
 using EasyChangelogProd.Modules.GitCommand.Interfaces;
 using EasyChangelogProd.Modules.MarkdownChangelog.Interfaces;
+using EasyChangelogProd.Modules.MarkdownWriter.Interfaces;
 using Microsoft.Extensions.Configuration;
 
 namespace EasyChangelogProd.Modules.AppSettings.Services;
 
 public class AppSettingsClient(IConfiguration configuration)
-    : IGitCommandAppSettings, IMarkdownChangelogAppSettings
+    : IGitCommandAppSettings, IMarkdownChangelogAppSettings, IMarkdownWriterAppSettings
 {
     ChangelogSettings__prune IChangelogSettings.GetChangelogSettingsPrune()
     {
