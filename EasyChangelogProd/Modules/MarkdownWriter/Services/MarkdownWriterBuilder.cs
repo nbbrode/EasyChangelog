@@ -1,10 +1,12 @@
-﻿using EasyChangelogProd.Modules.MarkdownWriter.Interfaces;
+﻿using EasyChangelogProd.Modules.HostedService.Interfaces;
+using EasyChangelogProd.Modules.MarkdownWriter.Interfaces;
 
 namespace EasyChangelogProd.Modules.MarkdownWriter.Services;
 
 public class MarkdownWriterBuilder(
     IMarkdownWriterMarkdownChangelog markdownWriterMarkdownChangelog,
-    IMarkdownWriterAppSettings markdownWriterAppSettings) : IMarkdownWriterBuilder
+    IMarkdownWriterAppSettings markdownWriterAppSettings) : IMarkdownWriterBuilder,
+    IHostedServiceMarkdownWriter
 {
     IMarkdownWriterProduct IMarkdownWriterBuilder.BuildMarkdownWriterProduct()
     {

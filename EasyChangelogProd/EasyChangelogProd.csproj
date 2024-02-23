@@ -18,4 +18,8 @@
     </None>
   </ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="EasyChangelogTests" />
+	</ItemGroup>
+
 </Project>
