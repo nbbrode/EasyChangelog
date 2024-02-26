@@ -126,6 +126,6 @@ public class MarkdownWriterProductTests
         rootProjectPath += @"\CHANGELOG.md";
 
         // Assert 
-        Assert.IsTrue(rootProjectPath.IsFileCreatedRecently(TimeSpan.FromSeconds(5)));
+        Assert.IsTrue(rootProjectPath.IsFileModifiedRecently(TimeSpan.FromSeconds(5)));
     }
 }

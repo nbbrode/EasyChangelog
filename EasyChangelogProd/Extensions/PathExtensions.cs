@@ -40,11 +40,11 @@ public static class PathExtensions
         return null; // No matching parent folder found
     }
 
-    public static bool IsFileCreatedRecently(this string filePath, TimeSpan threshold)
+    public static bool IsFileModifiedRecently(this string filePath, TimeSpan threshold)
     {
         if (File.Exists(filePath))
         {
-            var creationTime = File.GetCreationTime(filePath);
+            var creationTime = File.GetLastWriteTime(filePath);
             var currentTime = DateTime.Now;
 
             return currentTime - creationTime <= threshold;
