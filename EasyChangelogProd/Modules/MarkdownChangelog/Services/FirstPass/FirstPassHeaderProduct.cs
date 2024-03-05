@@ -5,8 +5,8 @@ namespace EasyChangelogProd.Modules.MarkdownChangelog.Services.FirstPass;
 
 public class FirstPassHeaderProduct(IMarkdownChangelogAppSettings markdownChangelogAppSettings) : IHeaderProduct
 {
-    private string? _appName;
-    private string? _markdown;
+    private string _appName;
+    private string _markdown;
 
 
     IHeaderProduct IHeaderProduct.SetAppName()

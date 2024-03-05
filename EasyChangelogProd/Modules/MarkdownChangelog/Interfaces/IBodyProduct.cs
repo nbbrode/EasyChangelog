@@ -14,7 +14,7 @@ public interface IBodyProduct
 
     void BuildSectionTitles(StringBuilder sb, string versionKey);
 
-    void BuildCommitMessages(StringBuilder sb, string versionKey, string? sectionKey);
+    void BuildCommitMessages(StringBuilder sb, string versionKey, string sectionKey);
 
 
     string GetMarkdown();

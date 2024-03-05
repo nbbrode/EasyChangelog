@@ -10,10 +10,10 @@ public class MarkdownWriterProduct(
     IMarkdownWriterAppSettings markdownWriterAppSettings)
     : IMarkdownWriterProduct
 {
-    private string? _body;
-    private string? _header;
-    private string? _markdownFileContent;
-    private string? _rootProjectPath;
+    private string _body;
+    private string _header;
+    private string _markdownFileContent;
+    private string _rootProjectPath;
 
     IMarkdownWriterProduct IMarkdownWriterProduct.SetHeader()
     {

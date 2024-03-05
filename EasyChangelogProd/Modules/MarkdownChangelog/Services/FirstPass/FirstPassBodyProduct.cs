@@ -12,7 +12,7 @@ public class FirstPassBodyProduct(
 {
     private List<CommitTagTypes__prune>? _commitTagTypesPruneList;
     private List<GitCommandOutput__flat>? _gitLogOutputFlatList;
-    private string? _markdown;
+    private string _markdown;
     private List<GitCommandOutput__flat>? _scrubbedLogOutputFlatList;
 
     IBodyProduct IBodyProduct.SetGitLogOutput()
@@ -78,7 +78,7 @@ public class FirstPassBodyProduct(
         return this;
     }
 
-    void IBodyProduct.BuildCommitMessages(StringBuilder sb, string versionKey, string? sectionKey)
+    void IBodyProduct.BuildCommitMessages(StringBuilder sb, string versionKey, string sectionKey)
     {
         var commitMessages = _scrubbedLogOutputFlatList?
             .Where(x => x is { ConventionalCommitTag: not null, Version: not null }

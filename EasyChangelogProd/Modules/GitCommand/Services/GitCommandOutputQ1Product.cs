@@ -10,10 +10,10 @@ namespace EasyChangelogProd.Modules.GitCommand.Services;
 public class GitCommandOutputQ1Product(IGitCommandAppSettings gitCommandAppSettings) : IGitCommandProduct
 {
     private ChangelogSettings__prune? _changelogSettingsPrune;
-    private string? _gitExePath;
-    private string? _gitLogOutputText;
-    private string? _gitRepoPath;
-    private string? _processStartInfoArgs;
+    private string _gitExePath;
+    private string _gitLogOutputText;
+    private string _gitRepoPath;
+    private string _processStartInfoArgs;
 
     IGitCommandProduct IGitCommandProduct.SetChangelogSettingsPrune()
     {
